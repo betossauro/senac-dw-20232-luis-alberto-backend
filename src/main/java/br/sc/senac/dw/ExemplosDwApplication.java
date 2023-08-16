@@ -1,4 +1,4 @@
-package br.sc.senac.dw.exemplosdw;
+package br.sc.senac.dw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
