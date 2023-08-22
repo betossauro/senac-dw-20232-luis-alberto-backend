@@ -23,4 +23,17 @@ public class ProdutoService {
     public Produto consultarPorID(Long id) {
         return produtoRepository.findById(id.longValue()).get();
     }
+
+    public Produto inserir(Produto novoProduto) {
+        return produtoRepository.save(novoProduto);
+    }
+
+    public Produto atualizar(Produto produtoParaAtualizar) {
+        return produtoRepository.save(produtoParaAtualizar);
+    }
+
+    public boolean excluir(Integer id) {
+        produtoRepository.deleteById(id.longValue());
+        return true;
+    }
 }
