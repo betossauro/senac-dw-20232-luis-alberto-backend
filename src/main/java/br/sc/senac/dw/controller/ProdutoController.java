@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.sc.senac.dw.Exception.CampoInvalidoException;
+import br.sc.senac.dw.exception.CampoInvalidoException;
 import br.sc.senac.dw.model.entity.Produto;
 import br.sc.senac.dw.service.ProdutoService;
 
