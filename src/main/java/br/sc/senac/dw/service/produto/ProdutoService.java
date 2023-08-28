@@ -1,4 +1,4 @@
-package br.sc.senac.dw.service;
+package br.sc.senac.dw.service.produto;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.sc.senac.dw.model.entity.Produto;
-import br.sc.senac.dw.model.repository.ProdutoRepository;
+import br.sc.senac.dw.model.entity.produto.Produto;
+import br.sc.senac.dw.model.repository.produto.ProdutoRepository;
 
 @Service
 public class ProdutoService {

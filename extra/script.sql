@@ -1,0 +1,10 @@
+CREATE TABLE `endereco` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `RUA` varchar(55) DEFAULT NULL,
+  `NUMERO` varchar(55) DEFAULT NULL,
+  `BAIRRO` varchar(55) DEFAULT NULL,
+  `CEP` varchar(9) DEFAULT NULL,
+  `CIDADE` varchar(55) DEFAULT NULL,
+  `ESTADO` varchar(55) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+)

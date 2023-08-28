@@ -1,4 +1,4 @@
-package br.sc.senac.dw.controller;
+package br.sc.senac.dw.controller.produto;
 
 // import java.time.LocalDate;
 // import java.util.ArrayList;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.sc.senac.dw.exception.CampoInvalidoException;
-import br.sc.senac.dw.model.entity.Produto;
-import br.sc.senac.dw.service.ProdutoService;
+import br.sc.senac.dw.model.entity.produto.Produto;
+import br.sc.senac.dw.service.produto.ProdutoService;
 
 @RestController
 @RequestMapping(path = "/api/produtos")

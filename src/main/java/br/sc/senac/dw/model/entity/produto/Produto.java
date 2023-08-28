@@ -1,4 +1,4 @@
-package br.sc.senac.dw.model.entity;
+package br.sc.senac.dw.model.entity.produto;
 
 import java.time.LocalDate;
 
