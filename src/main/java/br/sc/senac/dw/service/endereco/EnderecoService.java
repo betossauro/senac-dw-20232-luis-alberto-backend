@@ -9,7 +9,7 @@ import br.sc.senac.dw.model.entity.endereco.Endereco;
 
 import br.sc.senac.dw.model.repository.endereco.EnderecoRepository;
 import br.sc.senac.dw.seletor.endereco.EnderecoSeletor;
-import br.sc.senac.dw.specification.EnderecoSpecifications;
+import br.sc.senac.dw.specification.endereco.EnderecoSpecifications;
 
 @Service
 public class EnderecoService {

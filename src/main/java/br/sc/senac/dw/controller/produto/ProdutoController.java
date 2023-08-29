@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.sc.senac.dw.exception.CampoInvalidoException;
 import br.sc.senac.dw.model.entity.produto.Produto;
+import br.sc.senac.dw.seletor.produto.ProdutoSeletor;
 import br.sc.senac.dw.service.produto.ProdutoService;
 
 @RestController
@@ -35,6 +36,11 @@ public class ProdutoController {
     public Produto consultarPorID(@PathVariable Integer id) {
         return produtoService.consultarPorID(id.longValue());
     }
+
+    @PostMapping("/filtro")
+	public List<Produto> listarComSeletor(@RequestBody ProdutoSeletor seletor){
+		return produtoService.listarComSeletor(seletor);
+	}
 
     @PostMapping
     public Produto salvar(@RequestBody Produto novoProduto) throws CampoInvalidoException {

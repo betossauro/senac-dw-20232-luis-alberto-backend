@@ -1,4 +1,4 @@
-package br.sc.senac.dw.specification;
+package br.sc.senac.dw.specification.endereco;
 
 import java.util.ArrayList;
 import java.util.List;
