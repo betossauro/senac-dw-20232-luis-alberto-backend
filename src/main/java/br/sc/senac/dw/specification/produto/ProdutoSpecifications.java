@@ -21,7 +21,7 @@ public class ProdutoSpecifications {
 
             //TODO #1
             if (seletor.getFabricante() != null) {
-                predicates.add(cb.like(cb.lower(root.join("fabricante").get("fabricante")), "%"
+                predicates.add(cb.like(cb.lower(root.join("fabricante").get("nome")), "%"
                         + seletor.getFabricante().toLowerCase() + "%"));
             }
 
