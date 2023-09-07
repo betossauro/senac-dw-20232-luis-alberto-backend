@@ -6,6 +6,7 @@ public class ProdutoSeletor extends BaseSeletor {
 
     private String nome;
     private String fabricante;
+	private String cnpjFabricante;
     private Double valorMinimo;
     private Double valorMaximo;
     private Double pesoMinimo;
@@ -27,6 +28,14 @@ public class ProdutoSeletor extends BaseSeletor {
 
 	public void setFabricante(String fabricante) {
 		this.fabricante = fabricante;
+	}
+
+	public String getCnpjFabricante() {
+		return cnpjFabricante;
+	}
+
+	public void setCnpjFabricante(String cnpjFabricante) {
+		this.cnpjFabricante = cnpjFabricante;
 	}
 
 	public Double getValorMinimo() {

@@ -25,6 +25,11 @@ public class ProdutoSpecifications {
                         + seletor.getFabricante().toLowerCase() + "%"));
             }
 
+            if (seletor.getCnpjFabricante() != null) {
+                predicates.add(cb.equal(root.join("fabricante").get("cnpj"), 
+                        seletor.getCnpjFabricante().toLowerCase()));
+            }
+
             if (seletor.getPesoMinimo() != null && seletor.getPesoMaximo() != null) {
                 // WHERE peso BETWEEN min AND max
                 predicates.add(cb.between(root.get("peso"), seletor.getPesoMinimo(),

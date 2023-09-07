@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import br.sc.senac.dw.exception.CampoInvalidoException;
 import br.sc.senac.dw.model.entity.produto.Produto;
@@ -21,6 +22,7 @@ import br.sc.senac.dw.service.produto.ProdutoService;
 
 @RestController
 @RequestMapping(path = "/api/produtos")
+@CrossOrigin(origins = {"http://localhost:4200","http://localhost:5500"}, maxAge = 3600)
 public class ProdutoController {
 
     @Autowired
