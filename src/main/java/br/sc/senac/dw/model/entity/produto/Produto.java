@@ -32,5 +32,5 @@ public class Produto {
     private Double valor;
     private Double peso;
     @Column(name = "data_cadastro")
-    private LocalDate data;
+    private LocalDate dataCadastro;
 }

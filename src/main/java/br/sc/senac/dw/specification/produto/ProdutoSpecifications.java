@@ -15,17 +15,17 @@ public class ProdutoSpecifications {
         return (root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 
-            if (seletor.getNome() != null) {
+            if (seletor.getNome() != null && !seletor.getNome().isEmpty()) {
                 predicates.add(cb.like(cb.lower(root.get("nome")), "%" + seletor.getNome().toLowerCase() + "%"));
             }
 
-            //TODO #1
-            if (seletor.getFabricante() != null) {
+            // String está retornando vazia dando problema no fetch
+            if (seletor.getFabricante() != null && !seletor.getFabricante().isEmpty()) {
                 predicates.add(cb.like(cb.lower(root.join("fabricante").get("nome")), "%"
                         + seletor.getFabricante().toLowerCase() + "%"));
             }
 
-            if (seletor.getCnpjFabricante() != null) {
+            if (seletor.getCnpjFabricante() != null  && !seletor.getCnpjFabricante().isEmpty()) {
                 predicates.add(cb.equal(root.join("fabricante").get("cnpj"), 
                         seletor.getCnpjFabricante().toLowerCase()));
             }
@@ -55,15 +55,15 @@ public class ProdutoSpecifications {
             }
 
             if (seletor.getDataCadastroInicial() != null && seletor.getDataCadastroFinal() != null) {
-                // WHERE data_cadastro BETWEEN min AND max
-                predicates.add(cb.between(root.get("data_cadastro"), seletor.getDataCadastroInicial(),
+                // WHERE dataCadastro BETWEEN min AND max
+                predicates.add(cb.between(root.get("dataCadastro"), seletor.getDataCadastroInicial(),
                         seletor.getDataCadastroFinal()));
             } else if (seletor.getDataCadastroInicial() != null) {
-                // WHERE data_cadastro >= min
-                predicates.add(cb.greaterThanOrEqualTo(root.get("data_cadastro"), seletor.getDataCadastroInicial()));
+                // WHERE dataCadastro >= min
+                predicates.add(cb.greaterThanOrEqualTo(root.get("dataCadastro"), seletor.getDataCadastroInicial()));
             } else if (seletor.getDataCadastroFinal() != null) {
-                // WHERE data_cadastro <= max
-                predicates.add(cb.lessThanOrEqualTo(root.get("data_cadastro"), seletor.getDataCadastroFinal()));
+                // WHERE dataCadastro <= max
+                predicates.add(cb.lessThanOrEqualTo(root.get("dataCadastro"), seletor.getDataCadastroFinal()));
             }
 
             return cb.and(predicates.toArray(new Predicate[0]));

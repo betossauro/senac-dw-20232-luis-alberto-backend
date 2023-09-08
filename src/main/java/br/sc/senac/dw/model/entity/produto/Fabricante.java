@@ -3,7 +3,7 @@ package br.sc.senac.dw.model.entity.produto;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+// import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,7 +27,7 @@ public class Fabricante {
     private Integer id;
     private String nome;
 
-    @JsonIgnore
+    // @JsonIgnore
     private String cnpj;
 
     @JsonBackReference
