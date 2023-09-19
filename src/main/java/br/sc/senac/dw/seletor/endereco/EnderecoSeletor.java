@@ -6,9 +6,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EnderecoSeletor {
-    private String rua;
-    private String numero;
-    private String bairro;
+    // private String rua;
+    // private String numero;
+    // private String bairro;
     private String cep;
     private String cidade;
     private String estado;

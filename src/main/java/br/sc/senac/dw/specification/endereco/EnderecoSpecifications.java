@@ -15,17 +15,17 @@ public class EnderecoSpecifications {
         return (root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 
-            if (seletor.getRua() != null){
-                predicates.add((Predicate) cb.like(cb.lower(root.get("rua")), "%" +  seletor.getRua().toLowerCase() + "%"));
-            }
+            // if (seletor.getRua() != null){
+            //     predicates.add((Predicate) cb.like(cb.lower(root.get("rua")), "%" +  seletor.getRua().toLowerCase() + "%"));
+            // }
 
-            if (seletor.getNumero() != null){
-                predicates.add((Predicate) cb.like(cb.lower(root.get("numero")), "%" +  seletor.getNumero().toLowerCase() + "%"));
-            }
+            // if (seletor.getNumero() != null){
+            //     predicates.add((Predicate) cb.like(cb.lower(root.get("numero")), "%" +  seletor.getNumero().toLowerCase() + "%"));
+            // }
 
-            if (seletor.getBairro() != null){
-                predicates.add((Predicate) cb.like(cb.lower(root.get("bairro")), "%" +  seletor.getBairro().toLowerCase() + "%"));
-            }
+            // if (seletor.getBairro() != null){
+            //     predicates.add((Predicate) cb.like(cb.lower(root.get("bairro")), "%" +  seletor.getBairro().toLowerCase() + "%"));
+            // }
 
             if (seletor.getCep() != null){
                 predicates.add((Predicate) cb.like(cb.lower(root.get("cep")), "%" +  seletor.getCep().toLowerCase() + "%"));

@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import br.sc.senac.dw.model.entity.endereco.Endereco;
 
+import br.sc.senac.dw.model.entity.endereco.Endereco;
 import br.sc.senac.dw.model.repository.endereco.EnderecoRepository;
 import br.sc.senac.dw.seletor.endereco.EnderecoSeletor;
 import br.sc.senac.dw.specification.endereco.EnderecoSpecifications;

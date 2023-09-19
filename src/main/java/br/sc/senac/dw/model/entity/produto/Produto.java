@@ -2,6 +2,7 @@ package br.sc.senac.dw.model.entity.produto;
 
 import java.time.LocalDate;
 
+import br.sc.senac.dw.model.entity.fabricante.Fabricante;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
